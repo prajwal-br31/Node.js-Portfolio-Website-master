@@ -14,54 +14,83 @@ router.get('/', function (req, res, next) {
 
 /* about me */
 router.get('/about', function (req, res, next) {
-    res.render('pages/about', { title: 'ABOUT ME' });
+    res.render('pages/about', { title: 'PRAJWAL B R - ABOUT ME' });
 });
 
 /* portfolio */
 router.get('/portfolio', function (req, res, next) {
-    res.render('pages/portfolio', { title: 'PORTFOLIO' });
+    res.render('pages/portfolio', { title: 'PRAJWAL B R - PORTFOLIO' });
 });
 
 /* services */
 router.get('/services', function (req, res, next) {
-    res.render('pages/services', { title: 'SERVICES' });
+    res.render('pages/services', { title: 'PRAJWAL B R - SERVICES' });
 });
 
 /* contact me */
 router.get('/contact', function (req, res, next) {
-    res.render('pages/contact', { title: 'CONTACT ME' });
+    res.render('pages/contact', { title: 'PRAJWAL B R - CONTACT ME' });
 });
 
 router.post('/contact', function (req, res) {
     /* nodemailer setup */
-    var mailOpts, smtpTrans;
-    smtpTrans = nodemailer.createTransport({
-        service: "Gmail",
-        type: "SMTP",
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false,
+
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
         auth: {
-            user: "prajwalbr.1231@gmail.com",
-            //pass: "wmjp jcju salc vvcx"
+          user: "prajwalbr.1231@gmail.com",
+          pass: "uqzc pris aqkd doqe"
+        }
+      });
+
+      var mailOptions = {
+        from:"prajwalbr.1231@gmail.com",
+        to: "prajwalbr.1231@gmail.com",
+        subject: 'Email from Portfolio Website',
+        html: `<p>
+                Name : ${req.body.name} <br/>
+                Email : ${req.body.email} <br/>
+                Company : ${req.body.company} <br/>
+                Message : ${req.body.message}
+             </p>`
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+            res.render('pages/error-contact', { title: 'PRAJWAL B R - CONTACT ME'});
+        }
+        else {
+            res.render('pages/success-contact', { title: 'PRAJWAL B R - CONTACT ME', name: req.body.name});
         }
     });
 
-    mailOpts = {
-        from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-        to: 'prajwalbr.1231@gmail.com',
-        subject: 'Email from Portfolio Website',
-        text: req.body.message
-    };
-    smtpTrans.sendMail(mailOpts, function (error, info) {
+      var mailOptions = {
+        from: "prajwalbr.1231@gmail.com",
+        to: req.body.email,
+        subject: 'Thank you for contacting me',
+        html: `<p>Hello, ${req.body.name} 
+        <br/><br/>
+        I just recieved your message. 
+        <br/>
+        I will get back to you shortly!
+        <br/><br/><br/><br/>
+        Regards,
+        <br/>
+        Prajwal BR
+        </p>`
+  
+      };
+  
+      transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-            console.log(error);
-            res.render('pages/error-contact', { title: 'CONTACT ME'});
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
         }
-        else {
-            res.render('pages/success-contact', { title: 'CONTACT ME', name: req.body.name});
-        }
-    });
+      });
+
+
 });
 
 module.exports = router;

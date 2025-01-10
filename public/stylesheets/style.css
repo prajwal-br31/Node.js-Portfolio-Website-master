@@ -23,7 +23,7 @@ h2{
 }
 
 .full {
-    background: url("../images/business-869379.jpg") no-repeat center center fixed;
+    background: url("../images/1.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -94,9 +94,20 @@ h2{
     padding-top: 70px;
 }
 
+.btn-gradient {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #110940, #1761ab);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn-gradient:hover {
+    background: linear-gradient(45deg, #b5b8ea, #ffffff);
+  }
 
 .panel .text-vertical-center {
-    margin: 150px 0;
+    margin: 50px 0;
     text-align: center;
     vertical-align: middle;
 }
@@ -163,4 +174,11 @@ img.serviceimg {
 .footer > .container {
   padding-right: 15px;
   padding-left: 15px;
+  margin-left: 200px;
 }
+
+.footer > .container1 {
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+  }
