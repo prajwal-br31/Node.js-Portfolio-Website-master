@@ -38,14 +38,14 @@ router.post('/contact', function (req, res) {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: "prajwalbr.1231@gmail.com",
+          user: "example@gmail.com",
           pass: "uqfg dggf aqdd dsfe"
         }
       });
 
       var mailOptions = {
-        from:"prajwalbr.1231@gmail.com",
-        to: "prajwalbr.1231@gmail.com",
+        from:"example@gmail.com",
+        to: "example@gmail.com",
         subject: 'Email from Portfolio Website',
         html: `<p>
                 Name : ${req.body.name} <br/>
@@ -66,7 +66,7 @@ router.post('/contact', function (req, res) {
     });
 
       var mailOptions = {
-        from: "prajwalbr.1231@gmail.com",
+        from: "example@gmail.com",
         to: req.body.email,
         subject: 'Thank you for contacting me',
         html: `<p>Hello, ${req.body.name} 
