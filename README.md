@@ -18,12 +18,8 @@ Website hosted on AWS can be found here : https://prajwalbr.site/
     npm install
     ```
 
-4. Give email username and password details in the server/index.js file for email
-   
-    ```
-  [In server/routes](server/routes/index.js)
+4. Give email username and password details in the server/index.js file for email - [In server/routes](server/routes/index.js)
   
-    ```
 
 5. Start development by giving the command
    
