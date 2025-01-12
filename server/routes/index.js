@@ -39,7 +39,7 @@ router.post('/contact', function (req, res) {
         service: 'gmail',
         auth: {
           user: "prajwalbr.1231@gmail.com",
-          pass: "uqzc pris aqkd doqe"
+          pass: "uqfg dggf aqdd dsfe"
         }
       });
 
