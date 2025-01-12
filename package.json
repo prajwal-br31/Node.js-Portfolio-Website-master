@@ -7,11 +7,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucykang/Portfolio-Website"
+    "url": "https://github.com/prajwal-br31/Node.js-Portfolio-Website-master"
   },
-  "author": "Hae Yeon (Lucy) Kang",
-  "description": "A project for portfolio website",
-  "license": "MIT",
+  "author": "Prajwal B R",
+  "description": "https://github.com/prajwal-br31/Node.js-Portfolio-Website-master",
   "dependencies": {
     "body-parser": "~1.13.2",
     "cookie-parser": "~1.3.5",
