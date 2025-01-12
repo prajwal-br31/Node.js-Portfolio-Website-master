@@ -19,11 +19,13 @@ Website hosted on AWS can be found here : https://prajwalbr.site/
     ```
 
 4. Give email username and password details in the server/index.js file for email
-
-  [In server/routes](index.js)
+   
+    ```
+  [In server/routes](server/routes/index.js)
   
+    ```
 
-6. Start development by giving the command
+5. Start development by giving the command
    
     ```
     npm run start
