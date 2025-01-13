@@ -1,0 +1,280 @@
+/*
+Custom CSS File
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    font-family: 'nixie_oneregular', 'Courier New', Courier, monospace;
+    font-size: 12pt;
+}
+
+h1{
+    font-size: 22pt;
+}
+
+h2{
+    font-size: 20pt;
+}
+
+.full {
+    background: url("../images/1.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.panel {
+			background-color: rgba(255, 255, 255, 0.7);
+}
+        
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: grey;
+}
+
+.navbar-brand-centered {
+    position: absolute;
+    left: 45%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+    vertical-align: middle;
+}
+
+.navbar>.container .navbar-brand-centered, 
+.navbar>.container-fluid .navbar-brand-centered {
+    margin-left: -80px;
+}
+    
+.navbar .navbar-nav {
+    position: absolute;
+    display: inline-block;
+    left: 40%;
+    margin-top: 80px;
+    margin-left: -80px;
+    text-align: center;
+    vertical-align: middle;
+        
+}
+    
+.navbar .navbar-collapse {
+    text-align: center;
+}
+    
+.navbar-transparent .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    font-family: 'nixie_oneregular', 'Courier New', Courier, monospace; 
+    font-size: 18px;
+    color: grey;
+}
+
+.navbar-transparent .navbar-nav > li > a:hover,
+.navbar-transparent .navbar-nav > li > a:active{
+        color: rgb(500,0,70);
+        background-color: transparent;
+        font-weight: bold;
+}
+
+.row {
+    margin-bottom: 70px;
+}
+
+.main > .container {
+    padding-top: 70px;
+}
+
+.btn-gradient {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #110940, #1761ab);
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .btn-gradient:hover {
+    background: linear-gradient(45deg, #b5b8ea, #ffffff);
+  }
+
+.panel .text-vertical-center {
+    margin: 50px 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+hr.small {
+    max-width: 100px;
+}
+
+.row > .portfolio-item > h4 {
+    margin-top: 50px;
+}
+
+.row > .text-center {
+    margin-bottom: 30px;
+}
+
+img.serviceimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding-top: 20px;
+  background-color: transparent;
+  font-size: 10pt;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 5%;
+  position: absolute;
+}
+
+.footer > .container1 {
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+  }
+
+.navbar-logo{
+    align-items: center;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    justify-content: center;
+} 
+
+  /* When the screen is in  mobile browser */
+  @media (max-width: 768px) {
+
+    .navbar-logo{
+        align-items: center;
+        text-align: center;
+        margin-left: 300px;
+        margin-right: 300px;
+        justify-content: center;
+    } 
+
+    .navbar .navbar-nav {
+      position: relative;
+      left: 0;
+      margin-top: 100px;
+      margin-left: 0;
+      text-align: left;
+      display: block;
+    }
+  
+    .navbar .navbar-nav li {
+      margin-top: 5px;
+    }
+  
+    .navbar-brand-centered {
+      position: static;
+      width: auto;
+      text-align: left;
+      margin-left: 0;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-nav > li > a {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  }
+  /* Default styles for the navbar (desktop view) */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures space between navbar items (logo and toggle button) */
+    align-items: center;
+}
+
+/* Center the .navbar-brand */
+.navbar .navbar-brand {
+    position: absolute;  /* Remove it from the flex flow */
+    left: 52%;
+    transform: translateX(-52%);  /* Center it horizontally */
+    text-align: center;
+    width: auto;  /* Ensure the width is not fixed */
+}
+
+/* Optionally, you can create a class to add centering behavior */
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: auto;
+}
+
+/* For mobile screens, we ensure the .navbar-brand remains centered */
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        position: absolute;  /* Ensures it doesn't move from the left */
+        left: 75%;
+        transform: translateX(-75%);
+    }
+
+    /* Optionally, add this class for extra styling */
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-toggle {
+        position: absolute;
+        right: 10px;
+    }
+}
+  
